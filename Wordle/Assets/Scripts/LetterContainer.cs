@@ -22,4 +22,14 @@ public class LetterContainer : MonoBehaviour
     {
     	letter.text = " ";
     }
+    
+    public void SetLetter(char letter)
+    {
+    	this.letter.text = letter.ToString();
+    }
+    
+    public char Getletter()
+    {
+    	return this.letter.text[0];
+    }
 }
