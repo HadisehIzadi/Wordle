@@ -63,4 +63,36 @@ public class WordContainer : MonoBehaviour
    	letterContainers[currentletterIndex].Initialize();
    	return true;
    }
+   
+   public void Colorize(string secretWord)
+   {
+   	List<char> chars = new List<char>(secretWord.ToCharArray());
+   	
+   	for(int i = 0 ; i < letterContainers.Length ; i++)
+   	{
+   		char letterToCheck = letterContainers[i].Getletter();
+   		if(letterToCheck == secretWord[i])
+   		{
+   			//valid
+   			letterContainers[i].SetValid();
+   			chars.Remove(letterToCheck);
+   		}
+   		
+   		else if(chars.Contains(letterToCheck))
+   		{
+   			//potential
+   			letterContainers[i].SetPotentail();
+   			chars.Remove(letterToCheck);
+   		}
+   		
+   		else{
+   			//invalid
+   			letterContainers[i].SetInvalid();
+   		}
+   		
+   		}
+   	}
+
+   
+   
 }

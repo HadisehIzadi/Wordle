@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: y
+      value: Y
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -522,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: t
+      value: T
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -690,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: d
+      value: D
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -1226,8 +1226,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TRY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 05b5ac12bf43acb48a470c6d8d1ca77f, type: 2}
+  m_sharedMaterial: {fileID: 710353090117293468, guid: 05b5ac12bf43acb48a470c6d8d1ca77f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1633,7 +1633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: a
+      value: A
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -1902,7 +1902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: m
+      value: M
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -2008,7 +2008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: o
+      value: O
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -2293,7 +2293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: z
+      value: Z
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -2399,7 +2399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: v
+      value: V
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -2687,6 +2687,7 @@ GameObject:
   - component: {fileID: 1144508351}
   - component: {fileID: 1144508350}
   - component: {fileID: 1144508349}
+  - component: {fileID: 1144508352}
   m_Layer: 5
   m_Name: keyboard container
   m_TagString: Untagged
@@ -2781,6 +2782,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144508347}
   m_CullTransparentMesh: 1
+--- !u!114 &1144508352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144508347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dc0f274f5af534b98e73c44e538a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1157935485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2878,7 +2891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: r
+      value: R
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -2984,7 +2997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: w
+      value: W
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -3090,7 +3103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: h
+      value: H
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -3196,7 +3209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: e
+      value: E
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -3413,7 +3426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: k
+      value: K
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -3969,6 +3982,7 @@ GameObject:
   - component: {fileID: 1526754168}
   - component: {fileID: 1526754167}
   - component: {fileID: 1526754166}
+  - component: {fileID: 1526754169}
   m_Layer: 5
   m_Name: try
   m_TagString: Untagged
@@ -4018,11 +4032,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.13011748, g: 0.6415094, b: 0.6328278, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.8}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4073,7 +4087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -5177388603050735206, guid: 1ad0d57662f3ba749bdeaee49dd1b71f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4082,7 +4096,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.2
+  m_PixelsPerUnitMultiplier: 0.77
 --- !u!222 &1526754168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4091,6 +4105,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526754164}
   m_CullTransparentMesh: 1
+--- !u!114 &1526754169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526754164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.6313726}
+  m_EffectDistance: {x: 1, y: -15}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1527091485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4250,7 +4279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: b
+      value: B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -4467,7 +4496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: p
+      value: P
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -4635,7 +4664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: s
+      value: S
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -4741,7 +4770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: l
+      value: L
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -4847,7 +4876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: f
+      value: F
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -4953,7 +4982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: g
+      value: G
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -5048,6 +5077,7 @@ MonoBehaviour:
   - {fileID: 1233011204}
   - {fileID: 1132869126}
   tryButton: {fileID: 1526754166}
+  keyboardColorizer: {fileID: 1144508352}
 --- !u!4 &1742769455
 Transform:
   m_ObjectHideFlags: 0
@@ -5160,7 +5190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: x
+      value: X
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -5266,7 +5296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: j
+      value: J
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -5496,7 +5526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: i
+      value: I
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -5639,7 +5669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: c
+      value: C
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -5869,7 +5899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: n
+      value: N
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -6210,7 +6240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_text
-      value: u
+      value: U
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
@@ -6371,6 +6401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: back space
       objectReference: {fileID: 0}
+    - target: {fileID: 3982554447714472680, guid: 393d97eb90fa56a4e804f5cd22d798cd, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7456744171432029280, guid: 393d97eb90fa56a4e804f5cd22d798cd, type: 3}
       propertyPath: m_Interactable
       value: 1
@@ -6509,6 +6543,10 @@ PrefabInstance:
     - target: {fileID: 8166080305497909807, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166080306353301864, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
+      propertyPath: m_text
+      value: Q
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251e9e6f25b62d04782bb3614efb82e0, type: 3}
