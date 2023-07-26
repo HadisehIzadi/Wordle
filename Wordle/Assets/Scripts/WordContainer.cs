@@ -65,6 +65,12 @@ public class WordContainer : MonoBehaviour
    	return true;
    }
    
+   public void AddAsHint(int letterIndex, char letter)
+    {
+        letterContainers[letterIndex].SetLetter(letter, true);
+    }
+   
+   
    public void Colorize(string secretWord)
    {
    	List<char> chars = new List<char>(secretWord.ToCharArray());
