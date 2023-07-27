@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 	[SerializeField] private CanvasGroup gameCG;
 	[SerializeField] private CanvasGroup levelCompleteCG;
 	[SerializeField] private CanvasGroup gameoverCG;
+	 [SerializeField] private CanvasGroup menuCG;
      
 	[Header(" Level Complete Elements ")]
 	[SerializeField] private TextMeshProUGUI levelCompleteCoins;
@@ -25,6 +26,10 @@ public class UIManager : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI gameoverCoins;
 	[SerializeField] private TextMeshProUGUI gameoverSecretWord;
 	[SerializeField] private TextMeshProUGUI gameoverBestScore;
+	
+	[Header(" Menu Elements ")]
+    [SerializeField] private TextMeshProUGUI menuCoins;
+    [SerializeField] private TextMeshProUGUI menuBestScore;
 
 	private void Awake()
 	{
@@ -37,14 +42,19 @@ public class UIManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		ShowGame();
+		//ShowGame();
+		ShowMenu();
+		HideGame();
+		HideGameover();
 		HideLevelComplete();
         
 		GameManager.onGameStateChanged += GameStateChangedCallback;
+		DataManager.onCoinsUpdated += UpdateCoinsTexts;
 	}
 	private void OnDestroy()
 	{
 		GameManager.onGameStateChanged -= GameStateChangedCallback;
+		DataManager.onCoinsUpdated -= UpdateCoinsTexts;
 	}
 
 	private void GameStateChangedCallback(GameState gameState)
@@ -55,6 +65,7 @@ public class UIManager : MonoBehaviour
 				ShowGame();
 				HideLevelComplete();
 				HideGameover();
+				HideMenu();
 				break;
                 
 			case GameState.LevelComplete:
@@ -66,8 +77,23 @@ public class UIManager : MonoBehaviour
 				ShowGameover();
 				HideGame();
 				break;
+				
+			case GameState.Menu:
+
+                ShowMenu();
+                HideGame();
+
+                break;
 		}
 	}
+	
+	public void UpdateCoinsTexts()
+    {
+        menuCoins.text = DataManager.instance.GetCoins().ToString();
+        gameCoins.text = menuCoins.text;
+        levelCompleteCoins.text = menuCoins.text;
+        gameoverCoins.text = menuCoins.text;
+    }
     
 
 	// Update is called once per frame
@@ -118,7 +144,21 @@ public class UIManager : MonoBehaviour
 	{
 		HideCG(gameoverCG);
 	}
+	
+	private void ShowMenu()
+    {
+        menuCoins.text = DataManager.instance.GetCoins().ToString();
+        menuBestScore.text = DataManager.instance.GetBestScore().ToString();
 
+        ShowCG(menuCG);
+    }
+
+    private void HideMenu()
+    {
+        HideCG(menuCG);
+    
+        
+    }
 	private void ShowCG(CanvasGroup cg)
 	{
 		cg.alpha = 1;

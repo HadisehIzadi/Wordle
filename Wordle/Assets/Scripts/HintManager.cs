@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class HintManager : MonoBehaviour
 {
 	[Header(" Elements ")]
@@ -10,19 +10,62 @@ public class HintManager : MonoBehaviour
     
     
     
-	List<int> letterHintGivenIndices = new List<int>();
+	
+    [Header(" Settings ")]
+    List<int> letterHintGivenIndices = new List<int>();
+    private bool shouldReset;
     
-
+    
+    [Header(" Text Elements ")]
+    [SerializeField] private TextMeshProUGUI keyboardPriceText;
+    [SerializeField] private TextMeshProUGUI letterPriceText;
+    [SerializeField] private int keyboardHintPrice;
+    [SerializeField] private int letterHintPrice;
+    
 	private void Awake()
 	{
 		keys = keyboard.GetComponentsInChildren<keyboardkey>();
 	}
     
-	// Start is called before the first frame update
-	void Start()
-	{
-        
-	}
+    void Start()
+    {
+    	keyboardPriceText.text = keyboardHintPrice.ToString();
+        letterPriceText.text = letterHintPrice.ToString();
+        GameManager.onGameStateChanged += GameStateChangedCallback;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.onGameStateChanged -= GameStateChangedCallback;
+    }
+
+    private void GameStateChangedCallback(GameState gameState)
+    {
+        switch (gameState)
+        {
+            case GameState.Menu:
+
+                break;
+
+            case GameState.Game:
+
+                if(shouldReset)
+                {
+                    letterHintGivenIndices.Clear();
+                    shouldReset = false;
+                }
+
+                break;
+
+            case GameState.LevelComplete:
+                shouldReset = true;
+                break;
+
+            case GameState.Gameover:
+                shouldReset = true;
+                break;
+        }
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -33,7 +76,9 @@ public class HintManager : MonoBehaviour
 	public void KeyboardHint()
 	{
 		//Debug.Log("its working ");
-    	
+        if (DataManager.instance.GetCoins() < keyboardHintPrice)
+            return;
+        
 		string secretWord = WordManager.instance.GetSecretWord();
 
 		List<keyboardkey> untouchedKeys = new List<keyboardkey>();
@@ -53,12 +98,16 @@ public class HintManager : MonoBehaviour
         
 		int randomKeyIndex = Random.Range(0, t_untouchedKeys.Count);
 		t_untouchedKeys[randomKeyIndex].SetInvalid();
+		
+		DataManager.instance.RemoveCoins(keyboardHintPrice);
 
 	}
 
 	public void LetterHint()
 	{
 		//Debug.Log("its working ");
+    	if (DataManager.instance.GetCoins() < letterHintPrice)
+            return;
     	
 		if (letterHintGivenIndices.Count >= 5) {
 			// Debug.Log("All hints have been given");
@@ -80,6 +129,8 @@ public class HintManager : MonoBehaviour
 		letterHintGivenIndices.Add(randomIndex);
 
 		currentWordContainer.AddAsHint(randomIndex, secretWord[randomIndex]);
+		
+		DataManager.instance.RemoveCoins(letterHintPrice);
 
 	}
 }
