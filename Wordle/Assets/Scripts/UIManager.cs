@@ -10,7 +10,8 @@ public class UIManager : MonoBehaviour
 	[SerializeField] private CanvasGroup gameCG;
 	[SerializeField] private CanvasGroup levelCompleteCG;
 	[SerializeField] private CanvasGroup gameoverCG;
-	 [SerializeField] private CanvasGroup menuCG;
+	[SerializeField] private CanvasGroup menuCG;
+	[SerializeField] private CanvasGroup settingsCG;
      
 	[Header(" Level Complete Elements ")]
 	[SerializeField] private TextMeshProUGUI levelCompleteCoins;
@@ -159,6 +160,17 @@ public class UIManager : MonoBehaviour
     
         
     }
+    
+    public void ShowSettings()
+    {
+        ShowCG(settingsCG);
+    }
+
+    public void HideSettings()
+    {
+        HideCG(settingsCG);
+    }
+    
 	private void ShowCG(CanvasGroup cg)
 	{
 		cg.alpha = 1;

@@ -11,7 +11,7 @@ public class WordManager : MonoBehaviour
 	
 	
 	[Header(" Settings ")]
-    private bool shouldReset;
+    private bool shouldReset = true;
     
 	// make this class singletone
 	public static WordManager instance;

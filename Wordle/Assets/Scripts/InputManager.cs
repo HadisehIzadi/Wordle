@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 public class InputManager : MonoBehaviour
 {
 	[Header("elements")]
@@ -15,8 +17,12 @@ public class InputManager : MonoBehaviour
 	bool canAddletter = true;
 	private bool shouldReset;
 	
-	
+	[Header(" Events ")]
+    public static Action onLetterAdded;
+    public static Action onLetterRemoved;
 	public static InputManager instance;
+	
+	
 	private void Awake()
     {
         if (instance == null)
@@ -87,6 +93,7 @@ public class InputManager : MonoBehaviour
 			return;
     	
 		wordContainers[currentWordIndex].Add(letter);
+    	HepticManager.Vibrate();
     	
 		if (wordContainers[currentWordIndex].IsComplete()) {
 			//currentWordIndex++;
@@ -94,6 +101,8 @@ public class InputManager : MonoBehaviour
 			canAddletter = false;
 			EnableButton();
 		}
+    	
+    	onLetterAdded?.Invoke();
     	
     	
 	}
@@ -119,7 +128,7 @@ public class InputManager : MonoBehaviour
             if(currentWordIndex >= wordContainers.Length)
             {
                 //Debug.Log("Gameover");
-                DataManager.instance.ResetScore();
+                //DataManager.instance.ResetScore();
                 GameManager.instance.SetGameState(GameState.Gameover);
             }
             else
@@ -154,6 +163,7 @@ public class InputManager : MonoBehaviour
 		if (removeLetter)
 			DisableButton();
 		canAddletter = true;
+		onLetterRemoved?.Invoke();
 	}
    
    
